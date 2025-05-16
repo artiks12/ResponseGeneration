@@ -113,13 +113,8 @@ openrouter_client = OpenAI(
   api_key=openrouter_api_key,
 )
 
-GetResponses(GetOllamaAnswer,'instructions/ModelInstructions.json','ModelResponses','gemma3:12b-it-q4_K_M',1.7,1,True)
-GetResponses(GetOllamaAnswer,'instructions/ModelInstructions.json','ModelResponses','gemma3:12b-it-q4_K_M',1.7,1,False)
-
-GetResponses(GetGoogleApiAnswer,'instructions/ModelInstructions.json','ModelResponses','gemma-3-27b-it',27,5,True,google_client)
+GetResponses(GetGoogleApiAnswer,'instructions/ModelInstructions.json','ModelResponses','gemma-3-27b-it',27,5,False,google_client)
 GetResponses(GetOpenRouterApiAnswer,'instructions/ModelInstructions.json','ModelResponses','meta-llama/llama-4-maverick:free',17,5,False,openrouter_client)
 
-model = 'EuroLLM-9B-Instruct-LatLeg-32.4K-Q4_K_M'
-GetResponses(GetOllamaAnswer,'instructions/ModelInstructions.json','ModelResponses',model,9,1,True)
-GetResponses(GetOllamaAnswer,'instructions/100_3_RagWithRerankInstructionsArticles.json','ModelResponses',model,9,1,True)
+model = 'modelName'
 GetResponses(GetOllamaAnswer,'instructions/ModelInstructions.json','ModelResponses',model,9,1,False)
